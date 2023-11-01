@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment # Kubernetes resource kind we are creating
 metadata:
-  name: 46330799SimplePrj-1
+  name: kubernetesprj
 spec:
   selector:
     matchLabels:
-      app: 46330799SimplePrj-1
+      app: kubernetesprj
   replicas: 2 # Number of replicas that will be created for this deployment
   template:
     metadata:
       labels:
-        app: 46330799SimplePrj-1
+        app: kubernetesprj
     spec:
       containers:
-        - name: 46330799SimplePrj-1
+        - name: kubernetesprj 
           image: agnee21/springbootk8s # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
